@@ -1,0 +1,50 @@
+Using arch = intelxeon
+
+Using threading = yes
+
+'make' will be run in /home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno
+
+Issuing cmd: rsync -auC src/ /home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno ...
+0.006u 0.025s 0:00.06 33.3%	0+0k 0+136io 0pf+0w
+Done
+Issuing cmd: rsync -au run/ /home/keirouz/Pearls2_Chapter02_Copy/run_intelxeon_ompyes_CHUNK4_NZ32_FPMPno ...
+0.004u 0.010s 0:00.05 20.0%	0+0k 0+0io 0pf+0w
+Done
+Sourcing module_setup...
+Done
+Building GPTL ...
+make: Nothing to be done for `all'.
+install -d ../gptl_install/lib
+install -d ../gptl_install/include
+install -d ../gptl_install/bin
+install -d ../gptl_install/man/man3 
+install -m 0644 libgptl.a ../gptl_install/lib
+install -m 0644 gptl.h ../gptl_install/include
+install -m 0644 gptl.inc *.mod ../gptl_install/include
+install -m 0644 man/man3/*.3 ../gptl_install/man/man3
+install -m 0755 *pl ../gptl_install/bin
+Starting make for wsm6kernel ...
+Inside top level Makefile
+ARCH   = intelxeon
+OPENMP = yes
+CHUNK  = 4
+NZ     = 32
+TRANSLATEI = auto
+FPMP   = no
+SRCDIR = /home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno
+make -j8 SRCDIR=/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno -C kernel
+make[1]: Entering directory `/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/kernel'
+/lib/cpp  -I/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/tools -traditional -P -I../gptl_install/include  -DALIGN_OK  -D_OPENMP wsm6_kernel.F90 > wsm6_kernel.f90
+/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/tools/chunkfilter.pl wsm6_kernel.f90 > wsm6_kernel_chunk.f90
+/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/tools/literalkfilter.pl wsm6_kernel_chunk.f90 > wsm6_kernel_kcmd.f90
+ifort -o wsm6_kernel.o -g -O3 -ftz -traceback -I ../include -opt-report-phase=hlo -vec-report6 -align array64byte -xHost  -r8 -qopenmp  -c wsm6_kernel_kcmd.f90
+ifort: command line remark #10411: option '-opt-report-phase=hlo' is deprecated and will be removed in a future release. Please use the replacement option '-qopt-report-phase=hlo'
+ifort: command line warning #10128: invalid value 'hlo' for '-opt-report-phase'; ignoring
+ifort: command line remark #10148: option '-vec-report6' not supported
+ifort -o /home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/bin/wsm6kernel -qopenmp  wsm6_kernel.o  -L../gptl_install/lib -lgptl
+wsm6_kernel.o: In function `MAIN__':
+/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/kernel/wsm6_kernel_kcmd.f90:1488: undefined reference to `wsm62d_'
+make[1]: *** [/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/bin/wsm6kernel] Error 1
+make[1]: Leaving directory `/home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno/kernel'
+make: *** [build] Error 2
+ERROR:  make failure

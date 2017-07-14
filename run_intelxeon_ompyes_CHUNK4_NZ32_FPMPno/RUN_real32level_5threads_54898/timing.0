@@ -1,0 +1,1986 @@
+Clock rate = 1500.000000 MHz
+Source of clock rate was /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+  BIT64 was true
+GPTL was built with THREADED_OMP
+HAVE_MPI was false
+HAVE_PAPI was false
+Underlying timing routine was nanotime.
+GPTLget_overhead: using hash entry 345=Total for getentry estimate
+Total overhead of 1 GPTL start or GPTLstop call=2.47251e-07 seconds
+Components are as follows:
+Fortran layer:             4.4e-09 =   1.8% of total
+Get thread number:         6.4e-08 =  26.1% of total
+Generate hash index:       9.1e-08 =  36.9% of total
+Find hashtable entry:      5.0e-08 =  20.3% of total
+Underlying timing routine: 2.7e-08 =  10.9% of total
+Misc start/stop functions: 1.0e-08 =   4.1% of total
+
+NOTE: If GPTL is called from C not Fortran, the 'Fortran layer' overhead is zero
+NOTE: For calls to GPTLstart_handle()/GPTLstop_handle(), the 'Generate hash index' overhead is zero
+NOTE: For auto-instrumented calls, the cost of generating the hash index plus finding
+      the hashtable entry is 3.4e-11 not the 1.4e-07 portion taken by GPTLstart
+NOTE: Each hash collision roughly doubles the 'Find hashtable entry' cost of that timer
+
+If overhead stats are printed, they are the columns labeled self_OH and parent_OH
+self_OH is estimated as 2X the Fortran layer cost (start+stop) plust the cost of 
+a single call to the underlying timing routine.
+parent_OH is the overhead for the named timer which is subsumed into its parent.
+It is estimated as the cost of a single GPTLstart()/GPTLstop() pair.
+Print method was full_tree.
+
+If a '%_of' field is present, it is w.r.t. the first timer for thread 0.
+If a 'e6_per_sec' field is present, it is in millions of PAPI counts per sec.
+
+A '*' in column 1 below means the timer had multiple parents, though the
+values printed are for all calls.
+Further down the listing may be more detailed information about multiple
+parents. Look for 'Multiple parent info'
+
+Stats for thread 0:
+                     Called  Recurse Wallclock max       min       self_OH  parent_OH 
+  Total                     1    -       1.483     1.483     1.483     0.000     0.000 
+    WSM62D+OpenMP           1    -       1.163     1.163     1.163     0.000     0.000 
+      WSM62D              513    -       1.162  2.94e-03  1.69e-03     0.000     0.000 
+
+Overhead sum =  0.000249 wallclock seconds
+Total calls  = 515
+
+Stats for thread 1:
+          Called  Recurse Wallclock max       min       self_OH  parent_OH 
+  WSM62D       512    -       0.854  2.85e-03  1.14e-03     0.000     0.000 
+
+Overhead sum =  0.000248 wallclock seconds
+Total calls  = 512
+
+Stats for thread 2:
+          Called  Recurse Wallclock max       min       self_OH  parent_OH 
+  WSM62D       512    -       0.814  2.06e-03  1.17e-03     0.000     0.000 
+
+Overhead sum =  0.000248 wallclock seconds
+Total calls  = 512
+
+Stats for thread 3:
+          Called  Recurse Wallclock max       min       self_OH  parent_OH 
+  WSM62D       512    -       0.814  2.07e-03  1.16e-03     0.000     0.000 
+
+Overhead sum =  0.000248 wallclock seconds
+Total calls  = 512
+
+Stats for thread 4:
+          Called  Recurse Wallclock max       min       self_OH  parent_OH 
+  WSM62D       512    -       0.820  2.05e-03  1.17e-03     0.000     0.000 
+
+Overhead sum =  0.000248 wallclock seconds
+Total calls  = 512
+
+Stats for thread 5:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 6:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 7:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 8:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 9:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 10:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 11:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 12:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 13:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 14:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 15:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 16:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 17:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 18:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 19:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 20:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 21:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 22:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 23:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 24:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 25:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 26:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 27:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 28:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 29:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 30:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 31:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 32:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 33:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 34:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 35:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 36:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 37:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 38:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 39:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 40:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 41:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 42:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 43:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 44:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 45:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 46:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 47:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 48:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 49:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 50:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 51:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 52:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 53:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 54:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 55:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 56:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 57:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 58:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 59:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 60:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 61:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 62:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 63:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 64:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 65:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 66:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 67:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 68:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 69:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 70:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 71:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 72:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 73:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 74:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 75:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 76:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 77:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 78:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 79:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 80:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 81:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 82:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 83:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 84:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 85:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 86:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 87:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 88:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 89:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 90:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 91:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 92:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 93:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 94:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 95:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 96:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 97:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 98:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 99:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 100:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 101:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 102:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 103:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 104:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 105:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 106:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 107:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 108:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 109:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 110:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 111:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 112:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 113:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 114:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 115:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 116:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 117:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 118:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 119:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 120:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 121:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 122:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 123:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 124:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 125:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 126:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 127:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 128:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 129:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 130:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 131:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 132:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 133:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 134:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 135:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 136:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 137:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 138:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 139:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 140:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 141:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 142:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 143:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 144:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 145:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 146:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 147:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 148:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 149:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 150:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 151:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 152:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 153:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 154:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 155:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 156:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 157:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 158:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 159:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 160:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 161:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 162:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 163:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 164:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 165:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 166:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 167:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 168:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 169:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 170:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 171:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 172:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 173:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 174:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 175:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 176:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 177:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 178:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 179:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 180:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 181:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 182:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 183:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 184:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 185:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 186:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 187:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 188:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 189:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 190:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 191:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 192:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 193:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 194:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 195:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 196:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 197:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 198:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 199:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 200:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 201:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 202:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 203:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 204:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 205:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 206:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 207:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 208:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 209:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 210:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 211:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 212:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 213:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 214:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 215:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 216:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 217:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 218:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 219:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 220:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 221:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 222:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 223:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 224:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 225:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 226:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 227:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 228:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 229:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 230:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 231:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 232:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 233:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 234:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 235:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 236:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 237:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 238:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Stats for thread 239:
+  Called  Recurse Wallclock max       min       self_OH  parent_OH 
+
+Overhead sum =         0 wallclock seconds
+Total calls  = 0
+
+Same stats sorted by timer for threaded regions:
+Thd              Called  Recurse Wallclock max       min       self_OH  parent_OH 
+000 WSM62D            513    -       1.162  2.94e-03  1.69e-03     0.000     0.000 
+001 WSM62D            512    -       0.854  2.85e-03  1.14e-03     0.000     0.000 
+002 WSM62D            512    -       0.814  2.06e-03  1.17e-03     0.000     0.000 
+003 WSM62D            512    -       0.814  2.07e-03  1.16e-03     0.000     0.000 
+004 WSM62D            512    -       0.820  2.05e-03  1.17e-03     0.000     0.000 
+SUM WSM62D           2561    -       4.465  2.94e-03  1.14e-03     0.000     0.001 
+
+OVERHEAD.000 (wallclock seconds) =  0.000249
+OVERHEAD.001 (wallclock seconds) =  0.000248
+OVERHEAD.002 (wallclock seconds) =  0.000248
+OVERHEAD.003 (wallclock seconds) =  0.000248
+OVERHEAD.004 (wallclock seconds) =  0.000248
+OVERHEAD.005 (wallclock seconds) =         0
+OVERHEAD.006 (wallclock seconds) =         0
+OVERHEAD.007 (wallclock seconds) =         0
+OVERHEAD.008 (wallclock seconds) =         0
+OVERHEAD.009 (wallclock seconds) =         0
+OVERHEAD.010 (wallclock seconds) =         0
+OVERHEAD.011 (wallclock seconds) =         0
+OVERHEAD.012 (wallclock seconds) =         0
+OVERHEAD.013 (wallclock seconds) =         0
+OVERHEAD.014 (wallclock seconds) =         0
+OVERHEAD.015 (wallclock seconds) =         0
+OVERHEAD.016 (wallclock seconds) =         0
+OVERHEAD.017 (wallclock seconds) =         0
+OVERHEAD.018 (wallclock seconds) =         0
+OVERHEAD.019 (wallclock seconds) =         0
+OVERHEAD.020 (wallclock seconds) =         0
+OVERHEAD.021 (wallclock seconds) =         0
+OVERHEAD.022 (wallclock seconds) =         0
+OVERHEAD.023 (wallclock seconds) =         0
+OVERHEAD.024 (wallclock seconds) =         0
+OVERHEAD.025 (wallclock seconds) =         0
+OVERHEAD.026 (wallclock seconds) =         0
+OVERHEAD.027 (wallclock seconds) =         0
+OVERHEAD.028 (wallclock seconds) =         0
+OVERHEAD.029 (wallclock seconds) =         0
+OVERHEAD.030 (wallclock seconds) =         0
+OVERHEAD.031 (wallclock seconds) =         0
+OVERHEAD.032 (wallclock seconds) =         0
+OVERHEAD.033 (wallclock seconds) =         0
+OVERHEAD.034 (wallclock seconds) =         0
+OVERHEAD.035 (wallclock seconds) =         0
+OVERHEAD.036 (wallclock seconds) =         0
+OVERHEAD.037 (wallclock seconds) =         0
+OVERHEAD.038 (wallclock seconds) =         0
+OVERHEAD.039 (wallclock seconds) =         0
+OVERHEAD.040 (wallclock seconds) =         0
+OVERHEAD.041 (wallclock seconds) =         0
+OVERHEAD.042 (wallclock seconds) =         0
+OVERHEAD.043 (wallclock seconds) =         0
+OVERHEAD.044 (wallclock seconds) =         0
+OVERHEAD.045 (wallclock seconds) =         0
+OVERHEAD.046 (wallclock seconds) =         0
+OVERHEAD.047 (wallclock seconds) =         0
+OVERHEAD.048 (wallclock seconds) =         0
+OVERHEAD.049 (wallclock seconds) =         0
+OVERHEAD.050 (wallclock seconds) =         0
+OVERHEAD.051 (wallclock seconds) =         0
+OVERHEAD.052 (wallclock seconds) =         0
+OVERHEAD.053 (wallclock seconds) =         0
+OVERHEAD.054 (wallclock seconds) =         0
+OVERHEAD.055 (wallclock seconds) =         0
+OVERHEAD.056 (wallclock seconds) =         0
+OVERHEAD.057 (wallclock seconds) =         0
+OVERHEAD.058 (wallclock seconds) =         0
+OVERHEAD.059 (wallclock seconds) =         0
+OVERHEAD.060 (wallclock seconds) =         0
+OVERHEAD.061 (wallclock seconds) =         0
+OVERHEAD.062 (wallclock seconds) =         0
+OVERHEAD.063 (wallclock seconds) =         0
+OVERHEAD.064 (wallclock seconds) =         0
+OVERHEAD.065 (wallclock seconds) =         0
+OVERHEAD.066 (wallclock seconds) =         0
+OVERHEAD.067 (wallclock seconds) =         0
+OVERHEAD.068 (wallclock seconds) =         0
+OVERHEAD.069 (wallclock seconds) =         0
+OVERHEAD.070 (wallclock seconds) =         0
+OVERHEAD.071 (wallclock seconds) =         0
+OVERHEAD.072 (wallclock seconds) =         0
+OVERHEAD.073 (wallclock seconds) =         0
+OVERHEAD.074 (wallclock seconds) =         0
+OVERHEAD.075 (wallclock seconds) =         0
+OVERHEAD.076 (wallclock seconds) =         0
+OVERHEAD.077 (wallclock seconds) =         0
+OVERHEAD.078 (wallclock seconds) =         0
+OVERHEAD.079 (wallclock seconds) =         0
+OVERHEAD.080 (wallclock seconds) =         0
+OVERHEAD.081 (wallclock seconds) =         0
+OVERHEAD.082 (wallclock seconds) =         0
+OVERHEAD.083 (wallclock seconds) =         0
+OVERHEAD.084 (wallclock seconds) =         0
+OVERHEAD.085 (wallclock seconds) =         0
+OVERHEAD.086 (wallclock seconds) =         0
+OVERHEAD.087 (wallclock seconds) =         0
+OVERHEAD.088 (wallclock seconds) =         0
+OVERHEAD.089 (wallclock seconds) =         0
+OVERHEAD.090 (wallclock seconds) =         0
+OVERHEAD.091 (wallclock seconds) =         0
+OVERHEAD.092 (wallclock seconds) =         0
+OVERHEAD.093 (wallclock seconds) =         0
+OVERHEAD.094 (wallclock seconds) =         0
+OVERHEAD.095 (wallclock seconds) =         0
+OVERHEAD.096 (wallclock seconds) =         0
+OVERHEAD.097 (wallclock seconds) =         0
+OVERHEAD.098 (wallclock seconds) =         0
+OVERHEAD.099 (wallclock seconds) =         0
+OVERHEAD.100 (wallclock seconds) =         0
+OVERHEAD.101 (wallclock seconds) =         0
+OVERHEAD.102 (wallclock seconds) =         0
+OVERHEAD.103 (wallclock seconds) =         0
+OVERHEAD.104 (wallclock seconds) =         0
+OVERHEAD.105 (wallclock seconds) =         0
+OVERHEAD.106 (wallclock seconds) =         0
+OVERHEAD.107 (wallclock seconds) =         0
+OVERHEAD.108 (wallclock seconds) =         0
+OVERHEAD.109 (wallclock seconds) =         0
+OVERHEAD.110 (wallclock seconds) =         0
+OVERHEAD.111 (wallclock seconds) =         0
+OVERHEAD.112 (wallclock seconds) =         0
+OVERHEAD.113 (wallclock seconds) =         0
+OVERHEAD.114 (wallclock seconds) =         0
+OVERHEAD.115 (wallclock seconds) =         0
+OVERHEAD.116 (wallclock seconds) =         0
+OVERHEAD.117 (wallclock seconds) =         0
+OVERHEAD.118 (wallclock seconds) =         0
+OVERHEAD.119 (wallclock seconds) =         0
+OVERHEAD.120 (wallclock seconds) =         0
+OVERHEAD.121 (wallclock seconds) =         0
+OVERHEAD.122 (wallclock seconds) =         0
+OVERHEAD.123 (wallclock seconds) =         0
+OVERHEAD.124 (wallclock seconds) =         0
+OVERHEAD.125 (wallclock seconds) =         0
+OVERHEAD.126 (wallclock seconds) =         0
+OVERHEAD.127 (wallclock seconds) =         0
+OVERHEAD.128 (wallclock seconds) =         0
+OVERHEAD.129 (wallclock seconds) =         0
+OVERHEAD.130 (wallclock seconds) =         0
+OVERHEAD.131 (wallclock seconds) =         0
+OVERHEAD.132 (wallclock seconds) =         0
+OVERHEAD.133 (wallclock seconds) =         0
+OVERHEAD.134 (wallclock seconds) =         0
+OVERHEAD.135 (wallclock seconds) =         0
+OVERHEAD.136 (wallclock seconds) =         0
+OVERHEAD.137 (wallclock seconds) =         0
+OVERHEAD.138 (wallclock seconds) =         0
+OVERHEAD.139 (wallclock seconds) =         0
+OVERHEAD.140 (wallclock seconds) =         0
+OVERHEAD.141 (wallclock seconds) =         0
+OVERHEAD.142 (wallclock seconds) =         0
+OVERHEAD.143 (wallclock seconds) =         0
+OVERHEAD.144 (wallclock seconds) =         0
+OVERHEAD.145 (wallclock seconds) =         0
+OVERHEAD.146 (wallclock seconds) =         0
+OVERHEAD.147 (wallclock seconds) =         0
+OVERHEAD.148 (wallclock seconds) =         0
+OVERHEAD.149 (wallclock seconds) =         0
+OVERHEAD.150 (wallclock seconds) =         0
+OVERHEAD.151 (wallclock seconds) =         0
+OVERHEAD.152 (wallclock seconds) =         0
+OVERHEAD.153 (wallclock seconds) =         0
+OVERHEAD.154 (wallclock seconds) =         0
+OVERHEAD.155 (wallclock seconds) =         0
+OVERHEAD.156 (wallclock seconds) =         0
+OVERHEAD.157 (wallclock seconds) =         0
+OVERHEAD.158 (wallclock seconds) =         0
+OVERHEAD.159 (wallclock seconds) =         0
+OVERHEAD.160 (wallclock seconds) =         0
+OVERHEAD.161 (wallclock seconds) =         0
+OVERHEAD.162 (wallclock seconds) =         0
+OVERHEAD.163 (wallclock seconds) =         0
+OVERHEAD.164 (wallclock seconds) =         0
+OVERHEAD.165 (wallclock seconds) =         0
+OVERHEAD.166 (wallclock seconds) =         0
+OVERHEAD.167 (wallclock seconds) =         0
+OVERHEAD.168 (wallclock seconds) =         0
+OVERHEAD.169 (wallclock seconds) =         0
+OVERHEAD.170 (wallclock seconds) =         0
+OVERHEAD.171 (wallclock seconds) =         0
+OVERHEAD.172 (wallclock seconds) =         0
+OVERHEAD.173 (wallclock seconds) =         0
+OVERHEAD.174 (wallclock seconds) =         0
+OVERHEAD.175 (wallclock seconds) =         0
+OVERHEAD.176 (wallclock seconds) =         0
+OVERHEAD.177 (wallclock seconds) =         0
+OVERHEAD.178 (wallclock seconds) =         0
+OVERHEAD.179 (wallclock seconds) =         0
+OVERHEAD.180 (wallclock seconds) =         0
+OVERHEAD.181 (wallclock seconds) =         0
+OVERHEAD.182 (wallclock seconds) =         0
+OVERHEAD.183 (wallclock seconds) =         0
+OVERHEAD.184 (wallclock seconds) =         0
+OVERHEAD.185 (wallclock seconds) =         0
+OVERHEAD.186 (wallclock seconds) =         0
+OVERHEAD.187 (wallclock seconds) =         0
+OVERHEAD.188 (wallclock seconds) =         0
+OVERHEAD.189 (wallclock seconds) =         0
+OVERHEAD.190 (wallclock seconds) =         0
+OVERHEAD.191 (wallclock seconds) =         0
+OVERHEAD.192 (wallclock seconds) =         0
+OVERHEAD.193 (wallclock seconds) =         0
+OVERHEAD.194 (wallclock seconds) =         0
+OVERHEAD.195 (wallclock seconds) =         0
+OVERHEAD.196 (wallclock seconds) =         0
+OVERHEAD.197 (wallclock seconds) =         0
+OVERHEAD.198 (wallclock seconds) =         0
+OVERHEAD.199 (wallclock seconds) =         0
+OVERHEAD.200 (wallclock seconds) =         0
+OVERHEAD.201 (wallclock seconds) =         0
+OVERHEAD.202 (wallclock seconds) =         0
+OVERHEAD.203 (wallclock seconds) =         0
+OVERHEAD.204 (wallclock seconds) =         0
+OVERHEAD.205 (wallclock seconds) =         0
+OVERHEAD.206 (wallclock seconds) =         0
+OVERHEAD.207 (wallclock seconds) =         0
+OVERHEAD.208 (wallclock seconds) =         0
+OVERHEAD.209 (wallclock seconds) =         0
+OVERHEAD.210 (wallclock seconds) =         0
+OVERHEAD.211 (wallclock seconds) =         0
+OVERHEAD.212 (wallclock seconds) =         0
+OVERHEAD.213 (wallclock seconds) =         0
+OVERHEAD.214 (wallclock seconds) =         0
+OVERHEAD.215 (wallclock seconds) =         0
+OVERHEAD.216 (wallclock seconds) =         0
+OVERHEAD.217 (wallclock seconds) =         0
+OVERHEAD.218 (wallclock seconds) =         0
+OVERHEAD.219 (wallclock seconds) =         0
+OVERHEAD.220 (wallclock seconds) =         0
+OVERHEAD.221 (wallclock seconds) =         0
+OVERHEAD.222 (wallclock seconds) =         0
+OVERHEAD.223 (wallclock seconds) =         0
+OVERHEAD.224 (wallclock seconds) =         0
+OVERHEAD.225 (wallclock seconds) =         0
+OVERHEAD.226 (wallclock seconds) =         0
+OVERHEAD.227 (wallclock seconds) =         0
+OVERHEAD.228 (wallclock seconds) =         0
+OVERHEAD.229 (wallclock seconds) =         0
+OVERHEAD.230 (wallclock seconds) =         0
+OVERHEAD.231 (wallclock seconds) =         0
+OVERHEAD.232 (wallclock seconds) =         0
+OVERHEAD.233 (wallclock seconds) =         0
+OVERHEAD.234 (wallclock seconds) =         0
+OVERHEAD.235 (wallclock seconds) =         0
+OVERHEAD.236 (wallclock seconds) =         0
+OVERHEAD.237 (wallclock seconds) =         0
+OVERHEAD.238 (wallclock seconds) =         0
+OVERHEAD.239 (wallclock seconds) =         0
+OVERHEAD.SUM (wallclock seconds) =   0.00124
+Size of hash table was 1023
+Mean hash index for thread 0 was 651.000000
+
+Total GPTL memory usage = 4175.61 KB
+Components:
+Hashmem                 = 3928.38 KB
+Regionmem               = 1.4 KB (papimem portion = 0 KB)
+Parent/child arrays     = 0.072 KB
+Callstackmem            = 245.76 KB
+
+Thread mapping:
+GPTLthreadid_omp[0] = 0
+GPTLthreadid_omp[1] = 1
+GPTLthreadid_omp[2] = 2
+GPTLthreadid_omp[3] = 3
+GPTLthreadid_omp[4] = 4
+GPTLthreadid_omp[5] = -1
+GPTLthreadid_omp[6] = -1
+GPTLthreadid_omp[7] = -1
+GPTLthreadid_omp[8] = -1
+GPTLthreadid_omp[9] = -1
+GPTLthreadid_omp[10] = -1
+GPTLthreadid_omp[11] = -1
+GPTLthreadid_omp[12] = -1
+GPTLthreadid_omp[13] = -1
+GPTLthreadid_omp[14] = -1
+GPTLthreadid_omp[15] = -1
+GPTLthreadid_omp[16] = -1
+GPTLthreadid_omp[17] = -1
+GPTLthreadid_omp[18] = -1
+GPTLthreadid_omp[19] = -1
+GPTLthreadid_omp[20] = -1
+GPTLthreadid_omp[21] = -1
+GPTLthreadid_omp[22] = -1
+GPTLthreadid_omp[23] = -1
+GPTLthreadid_omp[24] = -1
+GPTLthreadid_omp[25] = -1
+GPTLthreadid_omp[26] = -1
+GPTLthreadid_omp[27] = -1
+GPTLthreadid_omp[28] = -1
+GPTLthreadid_omp[29] = -1
+GPTLthreadid_omp[30] = -1
+GPTLthreadid_omp[31] = -1
+GPTLthreadid_omp[32] = -1
+GPTLthreadid_omp[33] = -1
+GPTLthreadid_omp[34] = -1
+GPTLthreadid_omp[35] = -1
+GPTLthreadid_omp[36] = -1
+GPTLthreadid_omp[37] = -1
+GPTLthreadid_omp[38] = -1
+GPTLthreadid_omp[39] = -1
+GPTLthreadid_omp[40] = -1
+GPTLthreadid_omp[41] = -1
+GPTLthreadid_omp[42] = -1
+GPTLthreadid_omp[43] = -1
+GPTLthreadid_omp[44] = -1
+GPTLthreadid_omp[45] = -1
+GPTLthreadid_omp[46] = -1
+GPTLthreadid_omp[47] = -1
+GPTLthreadid_omp[48] = -1
+GPTLthreadid_omp[49] = -1
+GPTLthreadid_omp[50] = -1
+GPTLthreadid_omp[51] = -1
+GPTLthreadid_omp[52] = -1
+GPTLthreadid_omp[53] = -1
+GPTLthreadid_omp[54] = -1
+GPTLthreadid_omp[55] = -1
+GPTLthreadid_omp[56] = -1
+GPTLthreadid_omp[57] = -1
+GPTLthreadid_omp[58] = -1
+GPTLthreadid_omp[59] = -1
+GPTLthreadid_omp[60] = -1
+GPTLthreadid_omp[61] = -1
+GPTLthreadid_omp[62] = -1
+GPTLthreadid_omp[63] = -1
+GPTLthreadid_omp[64] = -1
+GPTLthreadid_omp[65] = -1
+GPTLthreadid_omp[66] = -1
+GPTLthreadid_omp[67] = -1
+GPTLthreadid_omp[68] = -1
+GPTLthreadid_omp[69] = -1
+GPTLthreadid_omp[70] = -1
+GPTLthreadid_omp[71] = -1
+GPTLthreadid_omp[72] = -1
+GPTLthreadid_omp[73] = -1
+GPTLthreadid_omp[74] = -1
+GPTLthreadid_omp[75] = -1
+GPTLthreadid_omp[76] = -1
+GPTLthreadid_omp[77] = -1
+GPTLthreadid_omp[78] = -1
+GPTLthreadid_omp[79] = -1
+GPTLthreadid_omp[80] = -1
+GPTLthreadid_omp[81] = -1
+GPTLthreadid_omp[82] = -1
+GPTLthreadid_omp[83] = -1
+GPTLthreadid_omp[84] = -1
+GPTLthreadid_omp[85] = -1
+GPTLthreadid_omp[86] = -1
+GPTLthreadid_omp[87] = -1
+GPTLthreadid_omp[88] = -1
+GPTLthreadid_omp[89] = -1
+GPTLthreadid_omp[90] = -1
+GPTLthreadid_omp[91] = -1
+GPTLthreadid_omp[92] = -1
+GPTLthreadid_omp[93] = -1
+GPTLthreadid_omp[94] = -1
+GPTLthreadid_omp[95] = -1
+GPTLthreadid_omp[96] = -1
+GPTLthreadid_omp[97] = -1
+GPTLthreadid_omp[98] = -1
+GPTLthreadid_omp[99] = -1
+GPTLthreadid_omp[100] = -1
+GPTLthreadid_omp[101] = -1
+GPTLthreadid_omp[102] = -1
+GPTLthreadid_omp[103] = -1
+GPTLthreadid_omp[104] = -1
+GPTLthreadid_omp[105] = -1
+GPTLthreadid_omp[106] = -1
+GPTLthreadid_omp[107] = -1
+GPTLthreadid_omp[108] = -1
+GPTLthreadid_omp[109] = -1
+GPTLthreadid_omp[110] = -1
+GPTLthreadid_omp[111] = -1
+GPTLthreadid_omp[112] = -1
+GPTLthreadid_omp[113] = -1
+GPTLthreadid_omp[114] = -1
+GPTLthreadid_omp[115] = -1
+GPTLthreadid_omp[116] = -1
+GPTLthreadid_omp[117] = -1
+GPTLthreadid_omp[118] = -1
+GPTLthreadid_omp[119] = -1
+GPTLthreadid_omp[120] = -1
+GPTLthreadid_omp[121] = -1
+GPTLthreadid_omp[122] = -1
+GPTLthreadid_omp[123] = -1
+GPTLthreadid_omp[124] = -1
+GPTLthreadid_omp[125] = -1
+GPTLthreadid_omp[126] = -1
+GPTLthreadid_omp[127] = -1
+GPTLthreadid_omp[128] = -1
+GPTLthreadid_omp[129] = -1
+GPTLthreadid_omp[130] = -1
+GPTLthreadid_omp[131] = -1
+GPTLthreadid_omp[132] = -1
+GPTLthreadid_omp[133] = -1
+GPTLthreadid_omp[134] = -1
+GPTLthreadid_omp[135] = -1
+GPTLthreadid_omp[136] = -1
+GPTLthreadid_omp[137] = -1
+GPTLthreadid_omp[138] = -1
+GPTLthreadid_omp[139] = -1
+GPTLthreadid_omp[140] = -1
+GPTLthreadid_omp[141] = -1
+GPTLthreadid_omp[142] = -1
+GPTLthreadid_omp[143] = -1
+GPTLthreadid_omp[144] = -1
+GPTLthreadid_omp[145] = -1
+GPTLthreadid_omp[146] = -1
+GPTLthreadid_omp[147] = -1
+GPTLthreadid_omp[148] = -1
+GPTLthreadid_omp[149] = -1
+GPTLthreadid_omp[150] = -1
+GPTLthreadid_omp[151] = -1
+GPTLthreadid_omp[152] = -1
+GPTLthreadid_omp[153] = -1
+GPTLthreadid_omp[154] = -1
+GPTLthreadid_omp[155] = -1
+GPTLthreadid_omp[156] = -1
+GPTLthreadid_omp[157] = -1
+GPTLthreadid_omp[158] = -1
+GPTLthreadid_omp[159] = -1
+GPTLthreadid_omp[160] = -1
+GPTLthreadid_omp[161] = -1
+GPTLthreadid_omp[162] = -1
+GPTLthreadid_omp[163] = -1
+GPTLthreadid_omp[164] = -1
+GPTLthreadid_omp[165] = -1
+GPTLthreadid_omp[166] = -1
+GPTLthreadid_omp[167] = -1
+GPTLthreadid_omp[168] = -1
+GPTLthreadid_omp[169] = -1
+GPTLthreadid_omp[170] = -1
+GPTLthreadid_omp[171] = -1
+GPTLthreadid_omp[172] = -1
+GPTLthreadid_omp[173] = -1
+GPTLthreadid_omp[174] = -1
+GPTLthreadid_omp[175] = -1
+GPTLthreadid_omp[176] = -1
+GPTLthreadid_omp[177] = -1
+GPTLthreadid_omp[178] = -1
+GPTLthreadid_omp[179] = -1
+GPTLthreadid_omp[180] = -1
+GPTLthreadid_omp[181] = -1
+GPTLthreadid_omp[182] = -1
+GPTLthreadid_omp[183] = -1
+GPTLthreadid_omp[184] = -1
+GPTLthreadid_omp[185] = -1
+GPTLthreadid_omp[186] = -1
+GPTLthreadid_omp[187] = -1
+GPTLthreadid_omp[188] = -1
+GPTLthreadid_omp[189] = -1
+GPTLthreadid_omp[190] = -1
+GPTLthreadid_omp[191] = -1
+GPTLthreadid_omp[192] = -1
+GPTLthreadid_omp[193] = -1
+GPTLthreadid_omp[194] = -1
+GPTLthreadid_omp[195] = -1
+GPTLthreadid_omp[196] = -1
+GPTLthreadid_omp[197] = -1
+GPTLthreadid_omp[198] = -1
+GPTLthreadid_omp[199] = -1
+GPTLthreadid_omp[200] = -1
+GPTLthreadid_omp[201] = -1
+GPTLthreadid_omp[202] = -1
+GPTLthreadid_omp[203] = -1
+GPTLthreadid_omp[204] = -1
+GPTLthreadid_omp[205] = -1
+GPTLthreadid_omp[206] = -1
+GPTLthreadid_omp[207] = -1
+GPTLthreadid_omp[208] = -1
+GPTLthreadid_omp[209] = -1
+GPTLthreadid_omp[210] = -1
+GPTLthreadid_omp[211] = -1
+GPTLthreadid_omp[212] = -1
+GPTLthreadid_omp[213] = -1
+GPTLthreadid_omp[214] = -1
+GPTLthreadid_omp[215] = -1
+GPTLthreadid_omp[216] = -1
+GPTLthreadid_omp[217] = -1
+GPTLthreadid_omp[218] = -1
+GPTLthreadid_omp[219] = -1
+GPTLthreadid_omp[220] = -1
+GPTLthreadid_omp[221] = -1
+GPTLthreadid_omp[222] = -1
+GPTLthreadid_omp[223] = -1
+GPTLthreadid_omp[224] = -1
+GPTLthreadid_omp[225] = -1
+GPTLthreadid_omp[226] = -1
+GPTLthreadid_omp[227] = -1
+GPTLthreadid_omp[228] = -1
+GPTLthreadid_omp[229] = -1
+GPTLthreadid_omp[230] = -1
+GPTLthreadid_omp[231] = -1
+GPTLthreadid_omp[232] = -1
+GPTLthreadid_omp[233] = -1
+GPTLthreadid_omp[234] = -1
+GPTLthreadid_omp[235] = -1
+GPTLthreadid_omp[236] = -1
+GPTLthreadid_omp[237] = -1
+GPTLthreadid_omp[238] = -1
+GPTLthreadid_omp[239] = -1

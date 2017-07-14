@@ -1,0 +1,26 @@
+#!/bin/csh
+
+echo "runscript is starting up in directory /home/keirouz/Pearls2_Chapter02_Copy/run_intelxeon_ompyes_CHUNK2_NZ32_FPMPno/RUN_real32level_1threads_155160"
+source ./module_setup || echo "Failure from source ./module_setup" && exit 1
+set threadstack = "256M"
+
+if (yes == 'yes') then
+#  source /opt/intel/inspector_xe/inspxe-vars.csh
+# use this for Intel Inspector
+#    set cmd = "time env OMP_NUM_THREADS=1 OMP_STACKSIZE=$threadstack inspxe-cl -collect=ti2 ./wsm6kernel"
+  set cmd = "time env OMP_NUM_THREADS=1 OMP_STACKSIZE=$threadstack ./wsm6kernel"
+else
+  set cmd = "time ./wsm6kernel"
+endif
+
+touch stdout
+echo "running $cmd" >> stdout
+($cmd) >> stdout
+
+if ($status == 0) then
+  echo wsm6kernel finished
+else
+  echo wsm6kernel failed
+  exit 23
+endif
+exit 0

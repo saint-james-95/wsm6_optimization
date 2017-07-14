@@ -1,0 +1,10 @@
+GPTLpr_summary: GPTL was built W/O MPI
+CAUTION: Calling with multiple MPI tasks will not produce the behavior you want.
+This is because all invoking tasks will write to the same file in a race condition.
+nthreads=240
+'ncalls': number of times the region was invoked across threads.
+
+name            ncalls   wallmax (thred)   wallmin (thred)
+Total                1     4.358 (    0)     4.358 (    0)
+WSM62D+OpenMP        1     4.125 (    0)     4.125 (    0)
+WSM62D            2561     4.122 (    0)     4.122 (    0)

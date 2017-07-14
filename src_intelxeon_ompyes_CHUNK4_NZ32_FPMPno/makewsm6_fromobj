@@ -1,0 +1,4 @@
+#!/bin/csh
+source ./module_setup || echo "ERROR:  Failure to source ./module_setup"
+make
+exit 0

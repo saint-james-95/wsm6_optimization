@@ -1,0 +1,12 @@
+#!/bin/csh
+set arch = intelxeon
+set threading = yes
+set chunk = 4
+set translatei = auto
+set fpmp = no
+set iinside = no
+set nz = 64
+set objdir = /home/big/LotsOfCores/v2/lotsofcoresbook2code/Pearls2_Chapter02/src_intelxeon_ompyes_CHUNK4_NZ64_FPMPno
+  # Enable Intel-specific Xeon cmds
+  # add any module commands here
+  set path = ( /root/perl5/bin /opt/scorep/bin /big/chapel-1.14.0/bin/linux64 /big/tau-2.25.2/x86_64/bin /big/berkeley_upc-2.22.3 /big/Intel/bin/compilers_and_libraries/linux/bin/intel64 /big/Intel/bin/compilers_and_libraries_2017.1.132/linux/mpi/intel64/bin /big/Intel/bin/intelpython27/bin /big/Intel/bin/advisor/bin64 /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /root/bin /opt/intel/bin )

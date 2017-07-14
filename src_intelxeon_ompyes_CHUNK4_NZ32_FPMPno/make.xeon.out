@@ -1,0 +1,7 @@
+Using arch = intelxeon
+
+Using threading = yes
+
+'make' will be run in /home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno
+
+Issuing cmd: rsync -auC src/ /home/keirouz/Pearls2_Chapter02_Copy/src_intelxeon_ompyes_CHUNK4_NZ32_FPMPno ...

@@ -1,0 +1,14 @@
+running time env OMP_NUM_THREADS=1 OMP_STACKSIZE=256M ./wsm6kernel
+ wsm6init():  read constants
+ wsm62D():  read input state
+ wsm62D():  itimestep ==           96
+ ERROR:  Build-time-specified NZ must equal namelist nz, values are: 
+          57          32
+0.003u 0.014s 0:00.01 100.0%	0+0k 40+8io 0pf+0w
+running time env OMP_NUM_THREADS=1 OMP_STACKSIZE=256M ./wsm6kernel
+ wsm6init():  read constants
+ wsm62D():  read input state
+ wsm62D():  itimestep ==           96
+ ERROR:  Build-time-specified NZ must equal namelist nz, values are: 
+          57          32
+0.004u 0.009s 0:00.01 0.0%	0+0k 0+8io 0pf+0w
