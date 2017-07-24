@@ -4,6 +4,63 @@
 !-------------------------------------------------------------------
   IMPLICIT NONE
 !-------------------------------------------------------------------
+
+  INTERFACE
+    subroutine readarray2(arr,arrname,unitno,ips,ipe)
+      REAL,             INTENT(OUT) :: arr(:,:)
+      CHARACTER(LEN=*), INTENT(IN)  :: arrname
+      INTEGER,          INTENT(IN)  :: unitno
+      INTEGER,          INTENT(IN)  :: ips,ipe
+      REAL, ALLOCATABLE :: tmparr(:)
+      INTEGER :: i,j,ij,jsize,CHUNK,ipn
+    end subroutine readarray2
+
+    subroutine readarray3(arr,arrname,unitno,ips,ipe)
+      REAL,             INTENT(OUT) :: arr(:,:,:)
+      CHARACTER(LEN=*), INTENT(IN)  :: arrname
+      INTEGER,          INTENT(IN)  :: unitno
+      INTEGER,          INTENT(IN)  :: ips,ipe
+      REAL, ALLOCATABLE :: tmparr(:,:)
+      INTEGER :: i,j,k,ij,ksize,jsize,CHUNK,ipn
+    end subroutine readarray3
+
+    subroutine readarray4(arr,arrname,unitno,ips,ipe)
+      REAL,             INTENT(OUT) :: arr(:,:,:,:)
+      CHARACTER(LEN=*), INTENT(IN)  :: arrname
+      INTEGER,          INTENT(IN)  :: unitno
+      INTEGER,          INTENT(IN)  :: ips,ipe
+      REAL, ALLOCATABLE :: tmparr(:,:,:)
+      INTEGER :: i,j,k,ij,ksize,jsize,CHUNK,ipn,m,msize
+    end subroutine readarray4
+
+    SUBROUTINE writearray2(arr,arrname,unitno,ips,ipe)
+      REAL,             INTENT(IN) :: arr(:,:)
+      CHARACTER(LEN=*), INTENT(IN) :: arrname
+      INTEGER,          INTENT(IN) :: unitno
+      INTEGER,          INTENT(IN) :: ips,ipe
+      REAL, ALLOCATABLE :: tmparr(:)
+      INTEGER :: i,j,ij,jsize,CHUNK,ipn
+    end subroutine writearray2
+
+    SUBROUTINE writearray3(arr,arrname,unitno,ips,ipe)
+      REAL,             INTENT(IN) :: arr(:,:,:)
+      CHARACTER(LEN=*), INTENT(IN) :: arrname
+      INTEGER,          INTENT(IN) :: unitno
+      INTEGER,          INTENT(IN) :: ips,ipe
+      REAL, ALLOCATABLE :: tmparr(:,:)
+      INTEGER :: i,j,k,ij,ksize,jsize,CHUNK,ipn
+    end subroutine writearray3
+
+    SUBROUTINE writearray4(arr,arrname,unitno,ips,ipe)
+      REAL,             INTENT(IN) :: arr(:,:,:,:)
+      CHARACTER(LEN=*), INTENT(IN) :: arrname
+      INTEGER,          INTENT(IN) :: unitno
+      INTEGER,          INTENT(IN) :: ips,ipe
+      REAL, ALLOCATABLE :: tmparr(:,:,:)
+      INTEGER :: i,j,k,ij,ksize,jsize,CHUNK,ipn,m,msize
+    end subroutine writearray4  
+  end INTERFACE
+
   INTEGER ::   ids, ide,  jds, jde, kds,kde , &
                ims, ime,  jms, jme, kms,kme , &
                its, ite,  jts, jte, kts,kte
